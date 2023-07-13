@@ -29,14 +29,4 @@ def test_Operation():
       }
     }, "Перевод организации", "Maestro 1596837868705199", "Счет 64686473678894779589")
 
-# def test_get_first_five_sorted_operations(valid_data):
-#     data = get_data(PATH_WITH_FIXTURES)
-#     data.data = valid_data
-#
-#     operation_list = data.get_first_five_sorted_operations()
-#     assert isinstance(operation_list, list)
-#     assert isinstance(operation_list[0], Operation)
-#     assert len(operation_list) == 2
-#     assert operation_list[1].oper_id == valid_data[0]['id']
-
 
