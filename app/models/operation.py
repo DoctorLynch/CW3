@@ -1,12 +1,11 @@
 from datetime import datetime
 
 
-
 class Operation:
-    def __init__(self, oper_id, oper_date_, transw_state, operation_amount, description_type, _to_, _from_=''):
+    def __init__(self, oper_id, transw_state, oper_date_, operation_amount, description_type, _to_, _from_=''):
         self.oper_id = oper_id
-        self.oper_date = self._encoded_date(oper_date_)
         self.transw_state = transw_state
+        self.oper_date = self._encoded_date(oper_date_)
         self.operation_amount = operation_amount
         self.description_type = description_type
         self._to_ = self.numbers_masking(_to_)
@@ -35,5 +34,8 @@ class Operation:
 
     def __str__(self):
         return f'{self.oper_date} {self.description_type}\n{self._from_} -> {self._to_}\n{self.operation_amount["amount"] + " " + self.operation_amount["currency"]["name"] }'
+
+
+
 
 
